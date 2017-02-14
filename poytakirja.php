@@ -55,5 +55,21 @@ h4
     </div>   
     </div>
     </div>
+    
+<div class="row">
+  <?php
+    include "settings.php";
+    
+    $otsikko = 'SELECT * FROM 533V_poytakirjat';
+    $nayta = $my -> query($otsikko);
+    
+  while($t = $nayta -> fetch_object()){
+    echo '<a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a>"."</div>";
+    echo "<p>". $t -> viimeisinkokous ."</p>"."</div>";
+    echo "<p>". $t -> dokumenttityyppi ."</p>"."</div>"; 
+  }
+  
+    $my -> close();
+      ?>
 </body>
 </html>
