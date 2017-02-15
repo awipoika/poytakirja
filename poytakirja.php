@@ -43,33 +43,35 @@ h4
 
 
 
-<div class="row">
-    <div class="small-12 medium-6 large-4 columns">
-    <p>Toimielimet</p>
-    </div>
-    <div class="small-12 medium-6 large-4 columns">
-    <p>Viimeisin kokous</p>
-    </div>
-    <div class="small-12 medium-6 large-4 columns">
-    <p>Dokumenttityyppi</p>
-    </div>   
-    </div>
-    </div>
     
 <div class="row">
+<table>
+<tr>
+<th>Toimielimet </th>
+</tr>
+<tr>
+<th>Viimeisinkokous</th>
+</tr>
+<tr>
+<th>Dokmenttityyppi</th>
+
   <?php
-    include "settings.php";
+  include "settings.php";    
     
     $otsikko = 'SELECT * FROM 533V_poytakirjat';
     $nayta = $my -> query($otsikko);
     
   while($t = $nayta -> fetch_object()){
-    echo '<a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a>"."</div>";
-    echo "<p>". $t -> viimeisinkokous ."</p>"."</div>";
-    echo "<p>". $t -> dokumenttityyppi ."</p>"."</div>"; 
-  }
+   echo "<tr>";
+    echo '<td><a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a></td>";
+    echo "<td>". $t -> viimeisinkokous ."</td>";
+    echo "<td>". $t -> dokumenttityyppi ."</td>";
+   echo  "</tr>";
+       }
   
+
     $my -> close();
       ?>
+      </table>
 </body>
-</html>
+</html
