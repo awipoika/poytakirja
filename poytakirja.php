@@ -41,22 +41,12 @@ h4
     <h1>Toimielimet</h1>
   </div>
 
-
-
-    
-
-<div class="row">
-    <div class="small-12 medium-6 large-4 columns">
-    <p>Toimielimet</p>
-    </div>
-    <div class="small-12 medium-6 large-4 columns">
-    <p>Viimeisin kokous</p>
-    </div>
-    <div class="small-12 medium-6 large-4 columns">
-    <p>Dokumenttityyppi</p>
-    </div>   
-    </div>
-    </div>
+  <div class="row">
+    <div class="small-6 medium-6 large-8 columns">Toimielimet</div>
+    <div class="small-6 medium-3 large-2 columns">Viimeisin kokous</div>
+    <div class="small-6 medium-3 large-2 columns">Dokumenttityyppi</div>
+  </div>
+  
 
   <?php
   include "settings.php";    
@@ -65,9 +55,14 @@ h4
     $nayta = $my -> query($otsikko);
     
   while($t = $nayta -> fetch_object()){
-    echo '<td><a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a></td>";
-    echo "<p>". $t -> viimeisinkokous ."</p>";
-    echo "<p>". $t -> dokumenttityyppi ."</p>";
+    echo '<div class="row">';
+    echo '<div class="small-6 medium-6 large-8 columns">'.'<td><a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a></td>"
+    . '</div>';
+    echo '<div class="small-6 medium-3 large-2 columns">'."<p>". $t -> viimeisinkokous ."</p>"
+    .'</div>';
+    echo '<div class="small-6 medium-3 large-2 columns">'. "<p>". $t -> dokumenttityyppi
+    ."</p>".'</div>';
+    echo '</div>';
        }
   
 
