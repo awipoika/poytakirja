@@ -44,16 +44,19 @@ h4
 
 
     
+
 <div class="row">
-<table>
-<tr>
-<th>Toimielimet </th>
-</tr>
-<tr>
-<th>Viimeisinkokous</th>
-</tr>
-<tr>
-<th>Dokmenttityyppi</th>
+    <div class="small-12 medium-6 large-4 columns">
+    <p>Toimielimet</p>
+    </div>
+    <div class="small-12 medium-6 large-4 columns">
+    <p>Viimeisin kokous</p>
+    </div>
+    <div class="small-12 medium-6 large-4 columns">
+    <p>Dokumenttityyppi</p>
+    </div>   
+    </div>
+    </div>
 
   <?php
   include "settings.php";    
@@ -62,11 +65,9 @@ h4
     $nayta = $my -> query($otsikko);
     
   while($t = $nayta -> fetch_object()){
-   echo "<tr>";
     echo '<td><a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a></td>";
-    echo "<td>". $t -> viimeisinkokous ."</td>";
-    echo "<td>". $t -> dokumenttityyppi ."</td>";
-   echo  "</tr>";
+    echo "<p>". $t -> viimeisinkokous ."</p>";
+    echo "<p>". $t -> dokumenttityyppi ."</p>";
        }
   
 
