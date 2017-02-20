@@ -40,13 +40,13 @@ h4
   <div class="small-12 columns">
     <h1>Toimielimet</h1>
   </div>
-
+   <a href="hallitus.php">Seuraava</a>
   <div class="row">
     <div class="small-6 medium-6 large-8 columns">Toimielimet</div>
     <div class="small-6 medium-3 large-2 columns">Viimeisin kokous</div>
     <div class="small-6 medium-3 large-2 columns">Dokumenttityyppi</div>
   </div>
-  
+    <p></p> 
 
   <?php
   include "settings.php";    
@@ -68,6 +68,5 @@ h4
 
     $my -> close();
       ?>
-      </table>
 </body>
 </html
