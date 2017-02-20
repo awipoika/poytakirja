@@ -3,6 +3,7 @@
 <head>
 <title>Pöytäkirjajärjestelmä</title>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel='stylesheet' type='text/css'>
 <style>
@@ -42,11 +43,10 @@ h4
     <h1>Kaupunginhallitus</h1>
   </div>
 </div>
-    <a class="red" href="poytakirja.php">Takaisin</a>    
   <div class="row">
-    <div class="small-6 medium-6 large-8 columns">Vuosi 2017</div>
-    <div class="small-6 medium-3 large-2 columns">Vuosi 2016</div>
-    <div class="small-6 medium-3 large-2 columns">Dokumentti</div>
+    <div class="small-4 medium-4 large-4 columns">Vuosi 2017</div>
+    <div class="small-4 medium-4 large-4 columns">Vuosi 2016</div>
+    <div class="small-4 medium-4 large-4 columns">Dokumentti</div>
   </div>
     <p></p> 
   <?php
@@ -57,9 +57,9 @@ h4
     
   while($t = $nayta -> fetch_object()){
     echo '<div class="row">';
-    echo '<div class="small-6 medium-6 large-8 columns">'. $t -> Vuosi . '</div>';
-    echo '<div class="small-6 medium-3 large-2 columns">'. $t -> Vuosii .'</div>';
-    echo '<div class="small-6 medium-3 large-2 columns">'.'<a href="'. $t -> link .'.php">'. $t -> Dokumentti . "</a>".'</div>';
+    echo '<div class="small-4 medium-4 large-4 columns">'. $t -> Vuosi . '</div>';
+    echo '<div class="small-4 medium-4 large-4 columns">'. $t -> Vuosii .'</div>';
+    echo '<div class="small-4 medium-4 large-4 columns">'.'<a href="'. $t -> link .'.php">'. $t -> Dokumentti . "</a>".'</div>';
     echo '</div>';
        }  
 

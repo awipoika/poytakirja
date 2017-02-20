@@ -3,6 +3,7 @@
 <head>
 <title>Pöytäkirjajärjestelmä</title>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel='stylesheet' type='text/css'>
 <style>
@@ -41,11 +42,10 @@ h4
     <h1>Toimielimet</h1>
   </div>
 </div>
-   <a href="hallitus.php">Seuraava</a>
   <div class="row">
-    <div class="small-6 medium-6 large-8 columns">Toimielimet</div>
-    <div class="small-6 medium-3 large-2 columns">Viimeisin kokous</div>
-    <div class="small-6 medium-3 large-2 columns">Dokumenttityyppi</div>
+    <div class="small-4 medium-4 large-4 columns">Toimielimet</div>
+    <div class="small-4 medium-4 large-4 columns">Viimeisin kokous</div>
+    <div class="small-4 medium-4 large-4 columns">Dokumenttityyppi</div>
   </div>
     <p></p> 
 
@@ -57,9 +57,9 @@ h4
     
   while($t = $nayta -> fetch_object()){
     echo '<div class="row">';
-    echo '<div class="small-6 medium-6 large-8 columns">'.'<a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a>" . '</div>';
-    echo '<div class="small-6 medium-3 large-2 columns">'."<p>". $t -> viimeisinkokous ."</p>" .'</div>';
-    echo '<div class="small-6 medium-3 large-2 columns">'. "<p>". $t -> dokumenttityyppi ."</p>".'</div>';
+    echo '<div class="small-4 medium-4 large-4 columns">'.'<a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a>" . '</div>';
+    echo '<div class="small-4 medium-4 large-4 columns">'."<p>". $t -> viimeisinkokous ."</p>" .'</div>';
+    echo '<div class="small-4 medium-4 large-4 columns">'. "<p>". $t -> dokumenttityyppi ."</p>".'</div>';
     echo '</div>';
   }
   
