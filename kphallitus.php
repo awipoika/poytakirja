@@ -17,7 +17,6 @@ h4
   text-align: center;
 }
 
-
 </style>
 </head>
 
@@ -42,27 +41,25 @@ h4
     <h1>Kaupunginhallitus</h1>
   </div>
 </div>
-    <a class="red" href="poytakirja.php">Takaisin</a>    
   <div class="row">
-    <div class="small-6 medium-6 large-8 columns">Vuosi 2017</div>
-    <div class="small-6 medium-3 large-2 columns">Vuosi 2016</div>
-    <div class="small-6 medium-3 large-2 columns">Dokumentti</div>
+    <div class="small-6 medium-3 large-2 columns">Pykälä</div>
+    <div class="small-6 medium-3 large-2 columns">Otsikko</div>
   </div>
     <p></p> 
+
   <?php
   include "settings.php";    
     
-    $otsikko = 'SELECT * FROM 533V_hallitus';
+    $otsikko = 'SELECT * FROM 533V_poytakirja2';
     $nayta = $my -> query($otsikko);
     
   while($t = $nayta -> fetch_object()){
     echo '<div class="row">';
-    echo '<div class="small-6 medium-6 large-8 columns">'. $t -> Vuosi . '</div>';
-    echo '<div class="small-6 medium-3 large-2 columns">'. $t -> Vuosii .'</div>';
-    echo '<div class="small-6 medium-3 large-2 columns">'.'<a href="'. $t -> link .'.php">'. $t -> Dokumentti . "</a>".'</div>';
+    echo '<div class="small-6 medium-6 large-8 columns">'.'<td><a href="'. $t -> Pykala .'.php">'. $t -> Pykala."</a>" . '</div>';
+    echo '<div class="small-6 medium-3 large-2 columns">'."<p>". $t -> Otsikko ."</p>".'</div>';
     echo '</div>';
-       }  
-
+       }
+  
     $my -> close();
       ?>
 </body>

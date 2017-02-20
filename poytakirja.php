@@ -40,6 +40,7 @@ h4
   <div class="small-12 columns">
     <h1>Toimielimet</h1>
   </div>
+</div>
    <a href="hallitus.php">Seuraava</a>
   <div class="row">
     <div class="small-6 medium-6 large-8 columns">Toimielimet</div>
@@ -49,24 +50,21 @@ h4
     <p></p> 
 
   <?php
-  include "settings.php";    
+    include "settings.php";    
     
     $otsikko = 'SELECT * FROM 533V_poytakirjat';
     $nayta = $my -> query($otsikko);
     
   while($t = $nayta -> fetch_object()){
     echo '<div class="row">';
-    echo '<div class="small-6 medium-6 large-8 columns">'.'<td><a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a></td>"
-    . '</div>';
-    echo '<div class="small-6 medium-3 large-2 columns">'."<p>". $t -> viimeisinkokous ."</p>"
-    .'</div>';
-    echo '<div class="small-6 medium-3 large-2 columns">'. "<p>". $t -> dokumenttityyppi
-    ."</p>".'</div>';
+    echo '<div class="small-6 medium-6 large-8 columns">'.'<a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a>" . '</div>';
+    echo '<div class="small-6 medium-3 large-2 columns">'."<p>". $t -> viimeisinkokous ."</p>" .'</div>';
+    echo '<div class="small-6 medium-3 large-2 columns">'. "<p>". $t -> dokumenttityyppi ."</p>".'</div>';
     echo '</div>';
-       }
+  }
   
 
     $my -> close();
       ?>
 </body>
-</html
+</html>
