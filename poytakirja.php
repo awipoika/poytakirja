@@ -13,10 +13,6 @@ h1
   text-align: center;
   color: blue;
 }
-h4
-{
-  text-align: center;
-}
 
 </style>
 </head>
@@ -57,7 +53,7 @@ h4
     
   while($t = $nayta -> fetch_object()){
     echo '<div class="row">';
-    echo '<div class="small-4 medium-4 large-4 columns">'.'<a href="'. $t -> toimielimet .'.php">'. $t -> toimielimet."</a>" . '</div>';
+    echo '<div class="small-4 medium-4 large-4 columns">'.'<a href="'.$t -> link .'.php">'. $t -> toimielimet."</a>" . '</div>';
     echo '<div class="small-4 medium-4 large-4 columns">'."<p>". $t -> viimeisinkokous ."</p>" .'</div>';
     echo '<div class="small-4 medium-4 large-4 columns">'. "<p>". $t -> dokumenttityyppi ."</p>".'</div>';
     echo '</div>';

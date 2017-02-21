@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Pöytäkirjajärjestelmä</title>
+<title>Kaupunginhallitus</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
@@ -13,9 +13,11 @@ h1
   text-align: center;
   color: blue;
 }
-h4
+.jaakko
 {
   text-align: center;
+  display: block;
+  font-size: 130%;
 }
 
 </style>
@@ -39,12 +41,13 @@ h4
 
 <div class="row">
   <div class="small-12 columns">
+    <a class="jaakko" href="http://cosmo.kpedu.fi/~joelkorpijarvi/git/poytakirja/poytakirja.php">Toimielimet</a>
     <h1>Kaupunginhallitus</h1>
   </div>
 </div>
   <div class="row">
-    <div class="small-6 medium-3 large-2 columns">Pykälä</div>
-    <div class="small-6 medium-3 large-2 columns">Otsikko</div>
+    <div class="small-6 medium-6 large-6 columns">Pykälä</div>
+    <div class="small-6 medium-6 large-6 columns">Otsikko</div>
   </div>
     <p></p> 
 
@@ -56,8 +59,9 @@ h4
     
   while($t = $nayta -> fetch_object()){
     echo '<div class="row">';
-    echo '<div class="small-6 medium-6 large-8 columns">'.'<td><a href="'. $t -> Pykala .'.php">'. $t -> Pykala."</a>" . '</div>';
-    echo '<div class="small-6 medium-3 large-2 columns">'."<p>". $t -> Otsikko ."</p>".'</div>';
+    echo '<div class="small-6 medium-6 large-6 columns">'. $t -> Pykala. '</div>';
+    echo '<div class="small-6 medium-6 large-6 columns">'.'<a href="'. $t ->
+    link .'.php">'. $t -> Otsikko . "</a>". '</div>';
     echo '</div>';
        }
   

@@ -13,9 +13,11 @@ h1
   text-align: center;
   color: blue;
 }
-h4
+.jaakko
 {
   text-align: center;
+  display: block;
+  font-size: 130%;
 }
 
 
@@ -40,6 +42,7 @@ h4
 
 <div class="row">
   <div class="small-12 columns">
+  <a class="jaakko" href="http://cosmo.kpedu.fi/~joelkorpijarvi/git/poytakirja/poytakirja.php">Toimielimet</a>
     <h1>Kaupunginhallitus</h1>
   </div>
 </div>
