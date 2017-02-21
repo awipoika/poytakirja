@@ -37,11 +37,11 @@ h2
   <div class="small-12 columns">
     <div class="row">
     <div class="small-8 columns">
-    <a href="http://cosmo.kpedu.fi/~joelkorpijarvi/git/poytakirja/poytakirja.php">Toimielimet</a>
+    <a href="http://cosmo.kpedu.fi/~joelkorpijarvi/git/poytakirja/poytakirja.php">Toimielimet &nbsp;&nbsp;-&nbsp;&nbsp;</a>
     <a href="http://cosmo.kpedu.fi/~joelkorpijarvi/git/poytakirja/kphallitus.php">Kaupunginhallitus</a>
   </div>
   </div>
-    <h2>Kaupunginhallitus Esityslista 4.2.2017/Asianro 45</h2>
+    <h2>Kaupunginhallitus Esityslista <br> 4.2.2017/Asianro 45</h2>
   </div>
 </div>
   <div class="row">

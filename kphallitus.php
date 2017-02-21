@@ -8,16 +8,10 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel='stylesheet' type='text/css'>
 <style>
 
-h1
+h2
 {
   text-align: center;
   color: blue;
-}
-.jaakko
-{
-  text-align: center;
-  display: block;
-  font-size: 130%;
 }
 
 </style>
@@ -41,8 +35,13 @@ h1
 
 <div class="row">
   <div class="small-12 columns">
-    <a class="jaakko" href="http://cosmo.kpedu.fi/~joelkorpijarvi/git/poytakirja/poytakirja.php">Toimielimet</a>
-    <h1>Kaupunginhallitus</h1>
+    <div class="row">
+    <div class="small-8 columns">
+    <a href="http://cosmo.kpedu.fi/~joelkorpijarvi/git/poytakirja/poytakirja.php">Toimielimet &nbsp;&nbsp;-&nbsp;&nbsp;</a>
+    <a href="http://cosmo.kpedu.fi/~joelkorpijarvi/git/poytakirja/hallitus.php">Hallitus</a>
+  </div>
+</div>
+    <h2>Kaupunginhallitus Esityslista <br> 4.2.2017 klo 17:00 - 00:00</h2>
   </div>
 </div>
   <div class="row">
